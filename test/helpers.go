@@ -76,7 +76,7 @@ func UseTempGitRepo() *TempGitRepo {
 	// Our libs expect the origin to be a github url
 	cmd = exec.Command("git", "remote", "set-url", "origin", "https://github.com/github/FAKE-GITHUB-REPO-NAME")
 	if output, err := cmd.Output(); err != nil {
-		panic(fmt.Errorf("error running %s\n%s\n%s", cmd, err, output))
+		panic(fmt.Errorf("pls help! error running %s\n%s\n%s", cmd, err, output))
 	}
 
 	tearDown := func() {
